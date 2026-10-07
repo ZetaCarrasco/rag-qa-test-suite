@@ -47,3 +47,17 @@ def test_answer_is_faithful_and_relevant(retriever, llm, judge, question):
         AnswerRelevancyMetric(threshold=THRESHOLD, model=judge, include_reason=False, async_mode=False),
     ]
     assert_test(test_case, metrics)
+
+
+def test_judge_detects_a_hallucinated_answer(retriever, judge):
+    """Negative control: a wrong answer must NOT pass, or the quality gate proves nothing."""
+    question = "How many vacation days do I get per year?"
+    context = [h.text for h in retriever.retrieve(question, top_k=3)]
+    test_case = LLMTestCase(
+        input=question,
+        actual_output="Employees receive 40 paid vacation days per year and can carry over all of them.",
+        retrieval_context=context,
+    )
+    metric = FaithfulnessMetric(threshold=THRESHOLD, model=judge, include_reason=False, async_mode=False)
+    metric.measure(test_case)
+    assert metric.score < THRESHOLD
