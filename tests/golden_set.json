@@ -1,19 +1,67 @@
 {
   "in_scope": [
-    {"question": "How many vacation days do I get per year?", "expected_source": "vacation-policy.md"},
-    {"question": "How far in advance must I request vacation?", "expected_source": "vacation-policy.md"},
-    {"question": "Can I work from another country?", "expected_source": "remote-work-policy.md"},
-    {"question": "What are the core working hours?", "expected_source": "remote-work-policy.md"},
-    {"question": "What is the home office allowance?", "expected_source": "remote-work-policy.md"},
-    {"question": "Within how many days must I submit an expense?", "expected_source": "expense-policy.md"},
-    {"question": "What is the daily meal limit when traveling?", "expected_source": "expense-policy.md"},
-    {"question": "When is my laptop replaced?", "expected_source": "equipment-policy.md"},
-    {"question": "What do I do if my laptop is stolen?", "expected_source": "equipment-policy.md"},
-    {"question": "How long is parental leave?", "expected_source": "health-benefits.md"},
-    {"question": "How much is the wellbeing budget?", "expected_source": "health-benefits.md"},
-    {"question": "How many sick days do I get?", "expected_source": "health-benefits.md"},
-    {"question": "How many characters must a password have?", "expected_source": "security-policy.md"},
-    {"question": "What should I do with a phishing email?", "expected_source": "security-policy.md"}
+    {
+      "question": "How many vacation days do I get per year?",
+      "expected_source": "vacation-policy.md",
+      "llm_eval": true
+    },
+    {
+      "question": "How far in advance must I request vacation?",
+      "expected_source": "vacation-policy.md"
+    },
+    {
+      "question": "Can I work from another country?",
+      "expected_source": "remote-work-policy.md",
+      "llm_eval": true
+    },
+    {
+      "question": "What are the core working hours?",
+      "expected_source": "remote-work-policy.md"
+    },
+    {
+      "question": "What is the home office allowance?",
+      "expected_source": "remote-work-policy.md"
+    },
+    {
+      "question": "Within how many days must I submit an expense?",
+      "expected_source": "expense-policy.md",
+      "llm_eval": true
+    },
+    {
+      "question": "What is the daily meal limit when traveling?",
+      "expected_source": "expense-policy.md"
+    },
+    {
+      "question": "When is my laptop replaced?",
+      "expected_source": "equipment-policy.md",
+      "llm_eval": true
+    },
+    {
+      "question": "What do I do if my laptop is stolen?",
+      "expected_source": "equipment-policy.md"
+    },
+    {
+      "question": "How long is parental leave?",
+      "expected_source": "health-benefits.md",
+      "llm_eval": true
+    },
+    {
+      "question": "How much is the wellbeing budget?",
+      "expected_source": "health-benefits.md"
+    },
+    {
+      "question": "How many sick days do I get?",
+      "expected_source": "health-benefits.md"
+    },
+    {
+      "question": "How many characters must a password have?",
+      "expected_source": "security-policy.md",
+      "llm_eval": true
+    },
+    {
+      "question": "What should I do with a phishing email?",
+      "expected_source": "security-policy.md"
+    }
   ],
   "out_of_scope": [
     "What is the capital of France?",

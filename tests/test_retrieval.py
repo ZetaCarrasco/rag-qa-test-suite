@@ -1,7 +1,7 @@
 """Retrieval quality tests driven by a golden set of questions."""
 import pytest
 
-from conftest import load_golden
+from helpers import load_golden
 from minirag.metrics import hit_rate_at_k
 
 GOLDEN = load_golden()
